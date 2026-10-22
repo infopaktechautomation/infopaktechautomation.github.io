@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pak Tech Automation Soft Suite — Software, Apps & Automation</title>
+<meta name="description" content="Pak Tech Automation Soft Suite — ready-made Android apps, PC software and custom business software. Offline business suite, video editor, downloader, games and more.">
+<meta property="og:title" content="Pak Tech Automation Soft Suite">
+<meta property="og:description" content="Professional Android apps, PC software and custom business automation from Pakistan.">
+<meta name="theme-color" content="#0b1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='900' font-size='26' text-anchor='middle' fill='%23fff'%3EPT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1220; --bg2:#0f1a2e; --card:#121f36; --line:#1f3050;
+  --text:#e8eef9; --muted:#9fb0cc; --accent:#10b981; --accent2:#22d3ee; --warn:#f59e0b;
+  --radius:18px; --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:.2s;white-space:nowrap}
+.btn-primary{background:var(--accent);color:#04241a}
+.btn-primary:hover{background:#34d399;transform:translateY(-2px)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-wa{background:#25d366;color:#05301a}
+.btn-wa:hover{background:#4ade80}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);padding:6px 12px;border-radius:999px}
+section{padding:90px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin:14px 0 12px;font-weight:800}
+.sec-head p{color:var(--muted)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px}
+.logo-mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#04241a;font-weight:900;font-size:16px;flex-shrink:0}
+.logo small{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.04em}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--muted);font-weight:600;font-size:15px}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.btn-wa,.nav-links a.btn-wa:hover{color:#05301a}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;width:42px;height:42px;font-size:20px;cursor:pointer}
+
+/* HERO */
+.hero{padding:80px 0 70px;position:relative}
+.hero::before{content:"";position:absolute;inset:-200px 0 auto;height:600px;background:radial-gradient(600px 300px at 20% 30%,rgba(16,185,129,.18),transparent 70%),radial-gradient(500px 300px at 85% 20%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
+.hero h1{font-size:clamp(34px,5.4vw,58px);line-height:1.08;font-weight:800;margin:18px 0}
+.hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:540px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}
+.trust{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:14px;font-weight:600}
+.trust b{color:var(--accent)}
+.hero-visual{position:relative;height:440px}
+.device{position:absolute;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.45);overflow:hidden}
+.laptop{width:88%;height:300px;right:0;top:20px;padding:16px}
+.phone{width:170px;height:330px;left:0;bottom:0;border-radius:28px;padding:14px;border:6px solid #1c2b47}
+.win-bar{display:flex;gap:6px;margin-bottom:14px}
+.win-bar i{width:10px;height:10px;border-radius:50%;background:#334766}
+.win-bar i:first-child{background:#ef4444}.win-bar i:nth-child(2){background:#f59e0b}.win-bar i:nth-child(3){background:#10b981}
+.dash-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px}
+.dash-card{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px}
+.dash-card b{display:block;font-size:20px}
+.dash-card small{color:var(--muted);font-size:11px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:110px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px}
+.bars span{flex:1;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,var(--accent2),var(--accent));opacity:.9;animation:grow 1.2s ease both}
+@keyframes grow{from{height:0}}
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.app-grid div{aspect-ratio:1;border-radius:12px}
+.phone-title{font-size:12px;font-weight:700;color:var(--muted)}
+.float-badge{position:absolute;right:20px;bottom:30px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 20px 40px rgba(0,0,0,.35);font-size:14px;font-weight:700;animation:bob 4s ease-in-out infinite}
+.float-badge .dot{width:10px;height:10px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 6px rgba(16,185,129,.2)}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* STRIP */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2);padding:26px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats b{display:block;font-size:30px;font-weight:800;color:var(--text)}
+.stats span{color:var(--muted);font-size:14px}
+
+/* PRODUCTS */
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.filters button{background:var(--card);border:1px solid var(--line);color:var(--muted);padding:10px 18px;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;transition:.2s}
+.filters button.active,.filters button:hover{color:#04241a;background:var(--accent);border-color:var(--accent)}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.product{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.product:hover{transform:translateY(-5px);border-color:rgba(16,185,129,.5);box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.p-cover{height:150px;position:relative;display:grid;place-items:center}
+.p-cover .icon{width:72px;height:72px;border-radius:20px;background:rgba(255,255,255,.16);backdrop-filter:blur(4px);display:grid;place-items:center;border:1px solid rgba(255,255,255,.25)}
+.p-cover .icon svg{width:38px;height:38px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.p-badge{position:absolute;top:14px;left:14px;background:rgba(0,0,0,.35);color:#fff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px;letter-spacing:.04em}
+.p-new{position:absolute;top:14px;right:14px;background:var(--warn);color:#2b1a00;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px}
+.p-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.p-body h3{font-size:20px;font-weight:800;margin-bottom:6px}
+.p-body p{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+.p-feat{list-style:none;display:grid;gap:7px;margin-bottom:20px}
+.p-feat li{font-size:14px;display:flex;gap:9px;align-items:flex-start}
+.p-feat li::before{content:"";flex-shrink:0;width:18px;height:18px;margin-top:2px;border-radius:50%;background:rgba(16,185,129,.15) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/11px no-repeat}
+.p-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
+.price small{display:block;color:var(--muted);font-size:12px;font-weight:600}
+.price b{font-size:20px;font-weight:800}
+.p-foot .btn{padding:11px 16px;font-size:14px}
+.empty{text-align:center;color:var(--muted);padding:30px;display:none}
+
+/* WHY */
+.why{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.why-card .ic{width:48px;height:48px;border-radius:14px;background:rgba(16,185,129,.12);display:grid;place-items:center;margin-bottom:16px}
+.why-card .ic svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.why-card h3{font-size:18px;margin-bottom:6px}
+.why-card p{color:var(--muted);font-size:14.5px}
+
+/* CUSTOM */
+.custom{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#0f2a2a,#10213d);border:1px solid var(--line);border-radius:28px;padding:50px}
+.custom h2{font-size:clamp(26px,3.6vw,36px);line-height:1.2;margin:14px 0}
+.custom p{color:var(--muted)}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.services div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:16px;font-weight:700;font-size:15px}
+.services small{display:block;color:var(--muted);font-weight:500;font-size:13px;margin-top:3px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative}
+.step::before{counter-increment:s;content:counter(s);width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#04241a;font-weight:900;display:grid;place-items:center;margin-bottom:16px}
+.step h3{font-size:17px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:14px}
+.pay{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.pay span{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 16px;font-weight:700;font-size:14px;color:var(--muted)}
+
+/* FAQ */
+.faq{max-width:800px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 22px}
+summary{cursor:pointer;list-style:none;font-weight:700;padding:18px 0;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--accent);line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);padding-bottom:18px;font-size:15px}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.c-info{display:grid;gap:14px;align-content:start}
+.c-item{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.2s}
+.c-item:hover{border-color:var(--accent)}
+.c-item .ic{width:46px;height:46px;border-radius:12px;background:rgba(16,185,129,.12);display:grid;place-items:center;flex-shrink:0}
+.c-item .ic svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.c-item small{color:var(--muted);display:block;font-size:13px}
+.c-item b{word-break:break-all}
+form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;gap:14px}
+form label{font-size:13px;font-weight:700;color:var(--muted);display:grid;gap:6px}
+input,select,textarea{width:100%;background:var(--bg2);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:12px 14px;font:inherit;font-size:15px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:110px;resize:vertical}
+.form-note{font-size:13px;color:var(--muted)}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.4);transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.7s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero-grid,.custom,.contact{grid-template-columns:1fr}
+  .hero-visual{height:380px;max-width:520px;width:100%;margin:0 auto}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .custom{padding:34px}
+}
+@media (max-width:720px){
+  .nav-links{position:fixed;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;gap:0;padding:10px 16px 20px;border-bottom:1px solid var(--line);display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px 4px;border-bottom:1px solid var(--line)}
+  .nav-links .btn{margin-top:14px}
+  .menu-btn{display:block}
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero{padding:48px 0 50px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats b{font-size:22px}
+  .dash-card b{font-size:15px}
+  .why-grid,.steps,.services{grid-template-columns:1fr}
+  .products{grid-template-columns:1fr}
+  .hero-visual{height:330px}
+  .laptop{height:240px;width:92%}
+  .phone{width:130px;height:250px}
+  .bars{height:70px}
+  .custom{padding:24px;border-radius:20px}
+  .logo-text{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo">
+      <span class="logo-mark">PT</span>
+      <span class="logo-text">Pak Tech Automation<small>SOFT SUITE</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#products">Products</a>
+      <a href="#custom">Custom Software</a>
+      <a href="#how">How to Buy</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="btn btn-wa js-wa" data-msg="Assalam o Alaikum! Mujhe aap ke software ke bare mein maloomat chahiye.">WhatsApp</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main id="home">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">Made in Pakistan 🇵🇰</span>
+        <h1>Smart <span>software &amp; apps</span> that make your business run itself.</h1>
+        <p class="lead">Ready-made Android apps, Windows software and fully custom business automation — offline-first, secure, and built for real Pakistani businesses.</p>
+        <div class="hero-cta">
+          <a href="#products" class="btn btn-primary">Browse Products →</a>
+          <a href="#" class="btn btn-ghost js-wa" data-msg="Assalam o Alaikum! Mujhe custom software banwana hai.">Get Custom Software</a>
+        </div>
+        <div class="trust">
+          <span><b>✓</b> Free demo / trial</span>
+          <span><b>✓</b> Works offline</span>
+          <span><b>✓</b> Urdu support</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="device laptop">
+          <div class="win-bar"><i></i><i></i><i></i></div>
+          <div class="dash-row">
+            <div class="dash-card"><b>1,284</b><small>Invoices</small></div>
+            <div class="dash-card"><b>Rs 4.2M</b><small>Sales</small></div>
+            <div class="dash-card"><b>12</b><small>Users</small></div>
+          </div>
+          <div class="bars">
+            <span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:80%"></span><span style="height:60%"></span><span style="height:92%"></span><span style="height:74%"></span>
+          </div>
+        </div>
+        <div class="device phone">
+          <div class="phone-title">My Apps</div>
+          <div class="app-grid">
+            <div style="background:linear-gradient(135deg,#10b981,#059669)"></div>
+            <div style="background:linear-gradient(135deg,#ec4899,#8b5cf6)"></div>
+            <div style="background:linear-gradient(135deg,#ef4444,#f97316)"></div>
+            <div style="background:linear-gradient(135deg,#3b82f6,#22d3ee)"></div>
+            <div style="background:linear-gradient(135deg,#f59e0b,#eab308)"></div>
+            <div style="background:linear-gradient(135deg,#6366f1,#0ea5e9)"></div>
+          </div>
+        </div>
+        <div class="float-badge"><span class="dot"></span> Synced over WiFi</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap stats">
+      <div><b id="statProducts">7+</b><span>Ready products</span></div>
+      <div><b>100%</b><span>Offline capable</span></div>
+      <div><b>Android + PC</b><span>Platforms</span></div>
+      <div><b>24/7</b><span>WhatsApp support</span></div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">Our Products</span>
+        <h2>Ready-to-use software for business &amp; fun</h2>
+        <p>Pick a product, try the demo, and start using it today. Every product comes with setup help and updates.</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="active" data-f="all">All</button>
+        <button data-f="business">Business</button>
+        <button data-f="android">Android</button>
+        <button data-f="pc">Windows PC</button>
+        <button data-f="games">Games</button>
+      </div>
+      <div class="products" id="productGrid"></div>
+      <p class="empty" id="emptyMsg">No products in this category yet.</p>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">Why Choose Us</span>
+        <h2>Built different. Built to last.</h2>
+        <p>We don't just sell software — we build tools that solve real problems in Pakistani offices, factories and shops.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Private &amp; Secure</h3><p>Your data stays on your own device and PC — encrypted, no cloud server needed.</p></div>
+        <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/><path d="M2 9a15 15 0 0 1 20 0"/></svg></div><h3>Works Offline</h3><p>No internet? No problem. Our apps run fully offline and sync over local WiFi.</p></div>
+        <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Urdu Support</h3><p>Talk to us in Urdu or English on WhatsApp. Quick replies and remote setup help.</p></div>
+        <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Flexible Licenses</h3><p>Monthly, 6-month or yearly license keys. Try first with a free demo period.</p></div>
+        <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div><h3>Regular Updates</h3><p>New features and fixes keep coming — your software keeps getting better.</p></div>
+        <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></div><h3>Industrial Know-how</h3><p>PLC, HMI and factory automation experience — we understand machines and offices.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM -->
+  <section id="custom">
+    <div class="wrap">
+      <div class="custom reveal">
+        <div>
+          <span class="tag">Custom Development</span>
+          <h2>Need something specific? We'll build it for you.</h2>
+          <p>Tell us your idea — we design, build and deliver a ready-to-install app or software with your company name and logo. Fixed price, clear timeline, full support.</p>
+          <div class="hero-cta" style="margin-bottom:0">
+            <a href="#" class="btn btn-primary js-wa" data-msg="Assalam o Alaikum! Mujhe custom software / app banwana hai. Meri requirement yeh hai:">Discuss Your Project</a>
+          </div>
+        </div>
+        <div class="services">
+          <div>Android Apps (APK)<small>Business, utility &amp; games</small></div>
+          <div>Windows Software<small>Installers that run in background</small></div>
+          <div>Invoicing &amp; Inventory<small>With multi-user WiFi sync</small></div>
+          <div>PLC / HMI Automation<small>Mitsubishi, Delta &amp; more</small></div>
+          <div>Websites &amp; Web Apps<small>Fast, mobile-friendly</small></div>
+          <div>Office Automation<small>Reports, Excel, workflows</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">How to Buy</span>
+        <h2>Simple 4-step process</h2>
+        <p>No complicated checkout. Just message us and we'll get you running.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><h3>Choose a product</h3><p>Browse above and tap "Order on WhatsApp" on the one you need.</p></div>
+        <div class="step reveal"><h3>Try the demo</h3><p>Get a free trial to test it on your own mobile or PC.</p></div>
+        <div class="step reveal"><h3>Make payment</h3><p>Pay easily through JazzCash, EasyPaisa or bank transfer.</p></div>
+        <div class="step reveal"><h3>Get your license</h3><p>Receive your license key and setup help — you're ready to go.</p></div>
+      </div>
+      <div class="pay"><span>JazzCash</span><span>EasyPaisa</span><span>Bank Transfer</span></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="why">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">FAQ</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Can I try the software before buying?</summary><p>Yes. Most products come with a free demo / trial period so you can test everything on your own device first.</p></details>
+        <details><summary>Do I need internet to use your apps?</summary><p>No. Our apps are offline-first. Business apps can sync between mobiles and PC over your local WiFi — no internet or cloud server required.</p></details>
+        <details><summary>How do I pay?</summary><p>You can pay through JazzCash, EasyPaisa or bank transfer. Message us on WhatsApp and we'll share the payment details.</p></details>
+        <details><summary>Can you add my company name and logo?</summary><p>Yes. Business products can show your company name, logo and invoice design. Custom branding is available on request.</p></details>
+        <details><summary>What if I need help installing?</summary><p>We provide setup help on WhatsApp and remote support, in Urdu or English.</p></details>
+        <details><summary>Do you make software on order?</summary><p>Absolutely. Share your requirement and we'll give you a price and timeline for a fully custom app or software.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="tag">Contact</span>
+        <h2>Let's talk about your software</h2>
+        <p>Send a message — we usually reply within a few hours.</p>
+      </div>
+      <div class="contact">
+        <div class="c-info">
+          <a href="#" class="c-item js-wa" data-msg="Assalam o Alaikum!">
+            <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <span><small>WhatsApp / Call</small><b id="phoneText">+92 303 7860355</b></span>
+          </a>
+          <a href="mailto:infopaktechautomation@gmail.com" class="c-item">
+            <span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
+            <span><small>Email</small><b>infopaktechautomation@gmail.com</b></span>
+          </a>
+          <div class="c-item">
+            <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <span><small>Working hours</small><b>Mon – Sat, 10am – 8pm (PKT)</b></span>
+          </div>
+        </div>
+        <form id="contactForm">
+          <label>Your name<input id="fName" required placeholder="e.g. Ahmed Khan"></label>
+          <label>Interested in
+            <select id="fProduct"></select>
+          </label>
+          <label>Message<textarea id="fMsg" required placeholder="Tell us what you need…"></textarea></label>
+          <button class="btn btn-wa" type="submit">Send on WhatsApp</button>
+          <p class="form-note">Your message opens in WhatsApp — nothing is stored on this website.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#home" class="logo"><span class="logo-mark">PT</span><span>Pak Tech Automation Soft Suite</span></a>
+    <span>© <span id="year"></span> Pak Tech Automation Soft Suite. All rights reserved.</span>
+  </div>
+</footer>
+
+<a href="#" class="wa-float js-wa" data-msg="Assalam o Alaikum! Mujhe aap ke software ke bare mein maloomat chahiye." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.5C5.2 9.8 10 5.1 16 5.1s10.8 4.7 10.8 10.5S22 26.1 16 26.1zm5.9-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.3-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.7 5.8 5.1 2.9 1.1 3.4.9 4.1.8.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   EDIT YOUR SETTINGS & PRODUCTS HERE
+   - WHATSAPP: number in international format, digits only
+   - price: write e.g. "Rs 2,500" — leave "" to show "Ask on WhatsApp"
+   - cat: any of "business", "android", "pc", "games"
+   - icon: one of the names in ICONS below
+   - color: two colors for the card background
+   ============================================================ */
+const WHATSAPP = "923037860355";
+
+const PRODUCTS = [
+  {
+    name: "Business Suite",
+    tagline: "Invoicing, sales & staff management for offices — on every mobile and PC.",
+    cat: ["business","android","pc"], icon: "invoice", color: ["#10b981","#0e7490"],
+    badge: "ANDROID + PC", isNew: false, price: "", priceNote: "Monthly / yearly license",
+    features: ["Invoices with your company logo & PDF", "Multi-user — sync phones to one office PC over WiFi", "Admin can check every user's data", "Encrypted offline data, no server needed"]
+  },
+  {
+    name: "Cutline Video Editor",
+    tagline: "Powerful offline video & photo editor — like CapCut, without the internet.",
+    cat: ["android"], icon: "video", color: ["#ec4899","#7c3aed"],
+    badge: "ANDROID", isNew: true, price: "", priceNote: "One-time / license",
+    features: ["Trim, split, text & music", "Beauty & makeup tools for photos", "Works 100% offline", "No watermark"]
+  },
+  {
+    name: "PakTech Downloader",
+    tagline: "Fast download manager for your favourite social video platforms.",
+    cat: ["android"], icon: "download", color: ["#ef4444","#f97316"],
+    badge: "ANDROID", isNew: true, price: "", priceNote: "PC version coming soon",
+    features: ["Download from popular video sites", "Clean, modern interface", "Fast multi-part downloads", "Save to gallery in one tap"]
+  },
+  {
+    name: "Ayaan — Urdu Voice Assistant",
+    tagline: "A JARVIS-style assistant for your Windows PC that understands Urdu.",
+    cat: ["pc"], icon: "mic", color: ["#6366f1","#0ea5e9"],
+    badge: "WINDOWS PC", isNew: true, price: "", priceNote: "License",
+    features: ["Control your PC by speaking Urdu", "Opens apps, writes files & emails", "Works locally — no API key needed", "Learns new tasks you teach it"]
+  },
+  {
+    name: "PakTech Code Agent",
+    tagline: "Portable AI coding agent on a USB — plug in and build apps on any PC.",
+    cat: ["pc"], icon: "code", color: ["#0f766e","#22d3ee"],
+    badge: "WINDOWS PC", isNew: true, price: "", priceNote: "On USB drive",
+    features: ["Local AI model — fully private", "Chat to build mobile & PC programs", "Runs from USB, leaves nothing behind", "Uses GPU for speed"]
+  },
+  {
+    name: "Office LAN Scanner",
+    tagline: "See every mobile and laptop connected to your office WiFi.",
+    cat: ["business","pc"], icon: "wifi", color: ["#3b82f6","#1e40af"],
+    badge: "WINDOWS PC", isNew: false, price: "", priceNote: "One-time",
+    features: ["Lists all connected devices", "Device name, IP & MAC address", "Spot unknown devices quickly", "Simple one-click scan"]
+  },
+  {
+    name: "Ludo Star Offline",
+    tagline: "Colorful, fun Ludo with themes, sounds and crowns — no internet needed.",
+    cat: ["games","android"], icon: "dice", color: ["#f59e0b","#dc2626"],
+    badge: "ANDROID GAME", isNew: false, price: "", priceNote: "One-time",
+    features: ["Bright themes & smooth animations", "Play with friends or computer", "Great sounds & proper pawns", "Works offline"]
+  }
+];
+
+const ICONS = {
+  invoice:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/>',
+  video:'<rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3"/>',
+  download:'<path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/>',
+  mic:'<rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4"/>',
+  code:'<path d="M8 6l-6 6 6 6"/><path d="M16 6l6 6-6 6"/>',
+  wifi:'<path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/><path d="M2 9a15 15 0 0 1 20 0"/>',
+  dice:'<rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8" cy="8" r="1.2"/><circle cx="16" cy="16" r="1.2"/><circle cx="12" cy="12" r="1.2"/>',
+  box:'<path d="M21 8l-9-5-9 5 9 5z"/><path d="M3 8v8l9 5 9-5V8"/>'
+};
+
+/* ===================== (no need to edit below) ===================== */
+const waLink = msg => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function render(filter){
+  const grid = document.getElementById("productGrid");
+  const list = PRODUCTS.filter(p => filter === "all" || p.cat.includes(filter));
+  grid.innerHTML = list.map(p => `
+    <article class="product">
+      <div class="p-cover" style="background:linear-gradient(135deg,${p.color[0]},${p.color[1]})">
+        <span class="p-badge">${esc(p.badge)}</span>
+        ${p.isNew ? '<span class="p-new">NEW</span>' : ''}
+        <div class="icon"><svg viewBox="0 0 24 24">${ICONS[p.icon] || ICONS.box}</svg></div>
+      </div>
+      <div class="p-body">
+        <h3>${esc(p.name)}</h3>
+        <p>${esc(p.tagline)}</p>
+        <ul class="p-feat">${p.features.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+        <div class="p-foot">
+          <div class="price"><small>${esc(p.priceNote || "Price")}</small><b>${p.price ? esc(p.price) : "Ask on WhatsApp"}</b></div>
+          <a class="btn btn-wa" target="_blank" rel="noopener" href="${waLink("Assalam o Alaikum! Mujhe \"" + p.name + "\" chahiye. Is ki price aur demo bata dein.")}">Order</a>
+        </div>
+      </div>
+    </article>`).join("");
+  document.getElementById("emptyMsg").style.display = list.length ? "none" : "block";
+}
+
+document.getElementById("filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  document.querySelectorAll("#filters button").forEach(x => x.classList.toggle("active", x === b));
+  render(b.dataset.f);
+});
+
+document.querySelectorAll(".js-wa").forEach(a => {
+  a.href = waLink(a.dataset.msg || "Assalam o Alaikum!");
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+const sel = document.getElementById("fProduct");
+sel.innerHTML = PRODUCTS.map(p => `<option>${esc(p.name)}</option>`).join("") + "<option>Custom software / app</option><option>Other</option>";
+
+document.getElementById("contactForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const msg = "Assalam o Alaikum! Mera naam " + document.getElementById("fName").value.trim() +
+    " hai.\nInterested in: " + sel.value + "\n\n" + document.getElementById("fMsg").value.trim();
+  window.open(waLink(msg), "_blank", "noopener");
+});
+
+const menuBtn = document.getElementById("menuBtn"), nav = document.getElementById("navLinks");
+menuBtn.addEventListener("click", () => nav.classList.toggle("open"));
+nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("statProducts").textContent = PRODUCTS.length + "+";
+render("all");
+
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting){ en.target.classList.add("show"); io.unobserve(en.target); }
+}), {threshold:.12}) : null;
+document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("show"));
+</script>
+</body>
+</html>
